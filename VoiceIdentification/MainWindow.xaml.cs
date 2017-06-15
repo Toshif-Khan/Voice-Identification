@@ -28,7 +28,7 @@ namespace VoiceIdentification
     public partial class MainWindow : Window
     {
         private string _selectedFile = "";
-        private SpeakerIdentificationServiceClient _serviceClient = new SpeakerIdentificationServiceClient("1cb9ba6056ee4ba1be230ac93bc1358c");
+        private SpeakerIdentificationServiceClient _serviceClient = new SpeakerIdentificationServiceClient("Paste your speaker recognition API key here");
         private WaveIn _waveIn;
         private WaveFileWriter _fileWriter;
         SortedList<Guid, string> enrollVoiceList = new SortedList<Guid, string>();
@@ -107,7 +107,7 @@ namespace VoiceIdentification
         /// <returns>Task to track the status of the asynchronous task.</returns>
         public async Task UpdateAllSpeakersAsync()
         {
-            SpeakerIdentificationServiceClient _serviceClient = new SpeakerIdentificationServiceClient("1cb9ba6056ee4ba1be230ac93bc1358c");
+            SpeakerIdentificationServiceClient _serviceClient = new SpeakerIdentificationServiceClient("Paste your speaker recognition API key here");
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             try
             {
